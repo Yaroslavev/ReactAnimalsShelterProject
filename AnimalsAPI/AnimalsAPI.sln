@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalsAPI", "AnimalsAPI\AnimalsAPI.csproj", "{FFFEE612-5542-4281-83D7-BC2D87698B2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{40EBB05E-BA1C-4CAF-BF2D-1FAD92349808}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{46858022-3CB1-4864-BB5B-D3194C35ECEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFFEE612-5542-4281-83D7-BC2D87698B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFFEE612-5542-4281-83D7-BC2D87698B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFFEE612-5542-4281-83D7-BC2D87698B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFFEE612-5542-4281-83D7-BC2D87698B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40EBB05E-BA1C-4CAF-BF2D-1FAD92349808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40EBB05E-BA1C-4CAF-BF2D-1FAD92349808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40EBB05E-BA1C-4CAF-BF2D-1FAD92349808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40EBB05E-BA1C-4CAF-BF2D-1FAD92349808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46858022-3CB1-4864-BB5B-D3194C35ECEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46858022-3CB1-4864-BB5B-D3194C35ECEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46858022-3CB1-4864-BB5B-D3194C35ECEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46858022-3CB1-4864-BB5B-D3194C35ECEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B28B190-3703-40B2-A6D3-8C464287252F}
+	EndGlobalSection
+EndGlobal
