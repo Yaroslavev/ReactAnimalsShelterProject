@@ -61,16 +61,6 @@ namespace Core.Services
 
         public async Task ChangeToAllFormats(string path, IFormFile imageFile)
         {
-            Console.WriteLine(imageFolder);
-            Console.WriteLine(imageSmallFolder);
-            Console.WriteLine(imageMediumFolder);
-            Console.WriteLine(imageLargeFolder);
-            Console.WriteLine(smallImgWidth);
-            Console.WriteLine(mediumImgWidth);
-            Console.WriteLine(largeImgWidth);
-            Console.WriteLine(smallImgHeight);
-            Console.WriteLine(mediumImgHeight);
-            Console.WriteLine(largeImgHeight);
             await ChangeToSmall(path, imageFile);
             await ChangeToMedium(path, imageFile);
             await ChangeToLarge(path, imageFile);
