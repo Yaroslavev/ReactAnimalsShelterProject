@@ -14,8 +14,8 @@ const AnimalsList: React.FC = () => {
     fetch(api).then(res => res.json()).then(data => {
       let animalsModels : AnimalModel[] = data;
       animalsModels.map(x => {
-        x.imageUrl = x.imageUrl && !x.imageUrl.startsWith("https://")
-          ? import.meta.env.VITE_ANIMALS_HOST + x.imageUrl.replace(/\\/g, "/") : x.imageUrl;
+        x.imageUrl = x.imageUrl && !x.imageUrl.startsWith("http")
+          ? import.meta.env.VITE_ANIMALS_IMG_MEDIUM + x.imageUrl.split("\\").pop() : x.imageUrl;
       })
       setAnimals(animalsModels);
     });

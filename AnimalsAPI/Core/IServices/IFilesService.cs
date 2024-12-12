@@ -7,5 +7,6 @@ namespace Core.IServices
         Task<string> SaveImage(IFormFile image);
         Task<string> EditImage(IFormFile image, string oldPath);
         Task DeleteImage(string path);
+        Task DeleteImageAllFormats(string path);
     }
 }

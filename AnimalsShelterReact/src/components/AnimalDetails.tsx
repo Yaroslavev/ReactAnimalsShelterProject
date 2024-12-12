@@ -17,7 +17,7 @@ export default function AnimalDetails() {
         fetch(api + id).then(res => res.json()).then(data => {
             if (data.imageUrl) {
                 data.imageUrl = data.imageUrl.startsWith("http") ? data.imageUrl :
-                    import.meta.env.VITE_ANIMALS_HOST + data.imageUrl.replace(/\\/g, "/");
+                    import.meta.env.VITE_ANIMALS_IMG_LARGE + data.imageUrl.split("\\").pop();
             }
 
             setAnimal(data);

@@ -100,7 +100,7 @@ namespace AnimalsAPI.Controllers
 
             if (Animal.ImageUrl != null)
             {
-                await filesService.DeleteImage(Animal.ImageUrl);
+                await filesService.DeleteImageAllFormats(Animal.ImageUrl);
             }
 
             context.Animals.Remove(Animal);

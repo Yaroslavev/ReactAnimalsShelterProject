@@ -23,7 +23,7 @@ function ToNormalUrl(url: string | undefined) : string | undefined {
         return undefined;
     }
 
-    const resUrl = url.startsWith("http") ? url : import.meta.env.VITE_ANIMALS_HOST + url.replace(/\\/g, "/")
+    const resUrl = url.startsWith("http") ? url : import.meta.env.VITE_ANIMALS_SMALL + url.replace(/\\/g, "/")
 
     return resUrl;
 }
@@ -59,17 +59,10 @@ export default function EditAnimal() {
             const data: AnimalFormField = res.data;
 
             if (data.imageUrl) {
-                data.image = {
-                    uid: "-1",
-                    name: "default_img.png",
-                    status: "done",
-                    url: ToNormalUrl(data.imageUrl)
-                };
-                setImageUrl(data.imageUrl);
+                setImageUrl(data.imageUrl)
                 setImageName(ToNormalUrl(data.imageUrl)!.split("/").pop());
             }
             
-
             form.setFieldsValue(data);
             setIsLoading(false);
         });
@@ -173,7 +166,8 @@ export default function EditAnimal() {
                                 uid: "-1",
                                 name: imageName,
                                 status: "done",
-                                url: ToNormalUrl(imageUrl),
+                                url: imageUrl?.startsWith("http") ? imageUrl :
+                                    import.meta.env.VITE_ANIMALS_IMG_SMALL + imageUrl?.split("\\").pop(),
                             }
                         ]}
                     >
