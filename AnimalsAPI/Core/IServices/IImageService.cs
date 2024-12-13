@@ -7,9 +7,9 @@ namespace Core.IServices
 {
     public interface IImageService
     {
-        Task ChangeToSmall(string path, IFormFile imageFile);
-        Task ChangeToMedium(string path, IFormFile imageFile);
-        Task ChangeToLarge(string path, IFormFile imageFile);
-        Task ChangeToAllFormats(string path, IFormFile imageFile);
+        Task ChangeToSmall(string path, Image imageFile);
+        Task ChangeToMedium(string path, Image imageFile);
+        Task ChangeToLarge(string path, Image imageFile);
+        Task ChangeToAllFormats(string path, Image imageFile);
     }
 }

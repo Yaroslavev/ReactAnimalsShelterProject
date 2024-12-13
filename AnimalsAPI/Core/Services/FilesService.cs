@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
+using System.Reflection;
+using SixLabors.ImageSharp;
 
 namespace Core.Services
 {
@@ -21,8 +23,13 @@ namespace Core.Services
             string relativePath = Path.Combine(imgFolder, name + ext);
             string fullPath = Path.Combine(root, relativePath);
 
-            await imageService.ChangeToAllFormats(fullPath, image);
-            await DeleteImage(relativePath);
+            using (var stream = image.OpenReadStream())
+            {
+                using (Image img = Image.Load(stream))
+                {
+                    await imageService.ChangeToAllFormats(fullPath, img);
+                }
+            }
 
             return Path.DirectorySeparatorChar + relativePath;
         }

@@ -26,9 +26,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\img\500x300\" />
-    <Folder Include="wwwroot\img\100x60\" />
-    <Folder Include="wwwroot\img\700x400\" />
+    <Folder Include="wwwroot\img\medium\" />
+    <Folder Include="wwwroot\img\small\" />
+    <Folder Include="wwwroot\img\large\" />
   </ItemGroup>
 
 </Project>
