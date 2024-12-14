@@ -120,7 +120,7 @@ export default function AddAnimal() {
                         message: "Img must be added"
                     }
                 ]}>
-                    <Upload maxCount={1} listType="picture-card">
+                    <Upload maxCount={1} accept="image/*" listType="picture-card">
                         <Button icon={<UploadOutlined/>}></Button>
                     </Upload>
                 </Form.Item>
